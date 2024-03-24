@@ -11,9 +11,9 @@ output_file=$2
 
 
 awk '{
-    gsub(/[^ATGCatgc]/, "");        # Remove non-ATGC characters
-    if (length($0) >= 196) {    # If length is 196 or more
-        print substr($0, 1, 196);  # Print only first 196 characters
+    gsub(/[^ATGCatgc]/, "");       
+    if (length($0) >= 196) {    
+        print substr($0, 1, 196);  
     }
 }' "$input_file" > "$output_file"
 
