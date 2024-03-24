@@ -12,4 +12,4 @@ output_file=$2
 
 awk '/^>/ { if (seq) { print length(seq), seq; } seq=""; print; next } { seq = seq $0 } END { if (seq) print length(seq), seq; }' "$input_file" > "$output_file"
 
-echo "Filtered sequence lengths and numbers saved to $output_file"
+
