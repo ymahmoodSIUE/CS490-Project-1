@@ -17,5 +17,5 @@ awk '{
     }
 }' "$input_file" > "$output_file"
 
-echo "Processed sequences saved to $output_file"
+
 
