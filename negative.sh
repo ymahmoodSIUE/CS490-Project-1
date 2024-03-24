@@ -16,4 +16,4 @@ awk 'BEGIN { OFS="\t" }
      NR>1 && $1==prev_chr { if (prev_end < $2) print prev_chr, prev_end+1, $2-1; prev_end=$3 }
      END { if (NR>0 && prev_end < $2) print prev_chr, prev_end+1, $2-1 }' "$positive_file" | awk '$2 <= $3' | sed 's/ /\t/g' > "$output_file"
 
-echo "Negative file generated: $output_file"
+
